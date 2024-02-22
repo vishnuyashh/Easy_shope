@@ -1,0 +1,213 @@
+
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+  <input type="text" placeholder="Search For Styles, Brands & More" style="width: 500px; margin-left: 400px; margin-top: 20px; margin-bottom: 10px;">
+  <i class="fa-regular fa-user" style="width: 500px; margin-left: 920px; margin-top: -40px; margin-bottom: 10px;"> <span>Account</span></i>
+  <i class="fa-regular fa-heart" style="width: 500px; margin-left: 1050px; margin-top: -40px; margin-bottom: 10px;"> <span>Whishlist</span></i>
+  <button style="color: black;width: 150px; margin-top: -40px; margin-bottom: 10px; border-radius: 5px;"><a href="{% url 'seller:s_index' %}" style="color: orangered;"  >Become A Seller</a></button>
+</div>
+
+<div class="row" style="margin-top: 30px;">
+  <div class="col-12"><img src="{% static 'images/indeximg8.jpg' %}" alt="" style="height: 400px; width: 1320px; margin-left: 20px;"></div>
+</div>
+
+<div class="row" style="margin-left: 70px; margin-top:50px;">
+  <div class="col-3"> <img src="{% static 'images/dp1.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Indian</h4>
+  </div>
+  <div class="col-3">
+    <img src="{% static 'images/dp2.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Western</h4>
+  </div>
+  <div class="col-3">
+    <img src="{% static 'images/dp3.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Women</h4>
+  </div>
+  <div class="col-3">
+  <img src="{% static 'images/dp4.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Men</h4>
+  </div>
+</div>
+
+
+
+<div class="row">
+<h1 style="color: rgb(233, 97, 7);">ＬＥＴ'Ｓ ＥＸＰＬＯＲＥ ＦＡＳＨＩＯＮ !</h1>
+</div>
+<div class="row">
+<div class="col-6" id="i.col-6">
+  <img src="{% static 'images/indeximg.jpg' %}" alt="" id="indeximg3">
+
+</div>
+<div class="col-6" id="ind_col-6">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/img2.jpg' %}" class="d-block w-100" alt="..." style="height: 480px;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/img3.jpg' %}" class="d-block w-100" alt="..." style="height: 480px;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/img4.jpg' %}" class="d-block w-100" alt="..."style="height: 480px;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!-- <span class="visually-hidden">Previous</span> -->
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <!-- <span class="visually-hidden">Next</span> -->
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12"><img src="{% static 'images/indeximg9.jpg' %}" alt="" style="height: 500px; width: 1320px; margin-left: 20px;"></div>
+</div>
+
+<div class="row">
+  <span style=" font-weight: 400; color: maroon;"><h1>Ｆａｓｈｉｏｎ Ｆａｄｅ， Ｓｔｙｌｅ Ｉｓ Ｅｔｅｒｎａｌ</h1></span>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+  <div class="col-6"><img src="{% static 'images/indeximg6.jpg' %}" alt="" style="height: 450px; width: 640px; margin-left: 20px;"></div>
+  <div class="col-6"><img src="{% static 'images/indeximg5.jpg' %}" alt="" style="height: 450px; margin-left: 10px;"></div>
+</div>
+
+<div class="row" style="margin-top: 30px;">
+  <h1 style="text-align: center;color:#2C3E50; ">“𝐘𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐟𝐢𝐧𝐝 𝐚 𝐬𝐭𝐲𝐥𝐞. 𝐀 𝐬𝐭𝐲𝐥𝐞 𝐟𝐢𝐧𝐝𝐬 𝐲𝐨𝐮.”</h1>
+</div>
+
+<div class="row" style="margin-left: 70px; margin-top:50px;">
+  <div class="col-3"> <img src="{% static 'images/dpmen2.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Coat</h4>
+  </div>
+  <div class="col-3">
+    <img src="{% static 'images/dpmen6.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Shirt</h4>
+  </div>
+  <div class="col-3">
+    <img src="{% static 'images/dpmen4.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">T-shirt</h4>
+  </div>
+  <div class="col-3">
+  <img src="{% static 'images/dpmen7.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Hoody</h4>
+  </div>
+</div>
+
+
+
+<div class="row" style="margin-left: 20px; margin-top: 50px">
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/men1.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+    
+    
+  </div></div>
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/men2.jpg' %}" class="card-img-top" alt="...">
+    
+  </div></div>
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/men3.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+   
+  </div></div>
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/men4.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+    
+  </div></div>
+</div>
+
+
+
+
+
+<div class="row" style="margin-top: 50px; margin-bottom: 10px;">
+  <h2 style="color:#4D5656; text-align: center;">꧁ღ⊱♥ "I want people to see the dress, but focus on the woman." ♥⊱ღ꧂</h2>
+</div>
+
+<div class="row" style="margin-left: 70px; margin-top:50px; margin-bottom: 50px;">
+  <div class="col-3"> <img src="{% static 'images/dpwomen1.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Saree</h4>
+  </div>
+  <div class="col-3">
+    <img src="{% static 'images/dpwomen3.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Churidar</h4>
+  </div>
+  <div class="col-3">
+    <img src="{% static 'images/dpwomen4.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Dungaree</h4>
+  </div>
+  <div class="col-3">
+  <img src="{% static 'images/dpwomen5.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
+    <h4 style="margin-left:60px;">Bodycon</h4>
+  </div>
+</div>
+
+
+<div class="row" style="margin-left: 20px; margin-top: 40px; margin-bottom: 20px;">
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/women6.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+    
+  </div></div>
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/women7.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+    
+  </div></div>
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/women9.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+    
+  </div></div>
+  <div class="col-3"><div class="card" style="width: 18rem;">
+    <img src="{% static 'images/women8.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
+    
+  </div></div>
+</div>
+
+
+
+</div>
+
+
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

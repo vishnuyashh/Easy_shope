@@ -1,0 +1,125 @@
+{% extends 'seller/s_masterpage.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    #addpdt_table{
+        height: 450px;
+        width: 400px;
+        margin-left: 30px;
+        text-align: center;
+    }
+    #addpdt_table h1{
+        padding-left: -60px;
+    }
+    #addpdt_row{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    #div1{
+        height: 550px;
+        width: 400px;
+        border-radius: 20px;
+        background-image: url('https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg');
+    }
+    #input{
+        color: black;
+    }
+    #addpdt_table th {
+        text-align: left;
+    }
+    
+
+</style>
+
+<div class="row" id="addpdt_row">
+    <div class="col-4"></div>
+    <div class="div" id="div1">
+        <div class="col-4">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table id="addpdt_table">
+                <tr>
+                    <th><h1>Add Products</h1></th>
+                </tr>
+                <tr>
+                    <th><label for="" style="text-align: left;">Product Name</label></th>
+                </tr>
+                <tr>
+                    <th><input type="text" name="name" placeholder="Enter Name"></th>
+                </tr>
+                <tr>
+                    <th><label for="">Description</label></th>
+                </tr>
+                <tr>
+                   <th><input type="text" name="description" placeholder="Enter Description"></th>
+                </tr>
+               
+                <tr>
+                    <th><label for="">Quantity</label></th>
+                </tr>
+                <tr>
+                    <th><input type="number" name="quantity" placeholder="Enter Quantity"></th>
+                </tr>
+                <tr>
+                    <th><label for="">Price</label></th>
+                </tr>
+                <tr>
+                    <th><input type="int" name="price" placeholder="Enter Price"></th>
+                </tr>
+                <tr>
+                  <th><label for="">Image</label></th>
+                </tr>
+                <tr>
+                    <th><input type="file" name="image" placeholder="Add Image" id="input"></th>
+                </tr>
+                <tr><th><label for="">Select Category</label></th></tr>
+                <tr>
+                    <th><select name="cat" id="">
+                        {% for i in cat %}
+                        <option value="{{i.id}}" 
+                        name="">{{i.name}}</option>
+                        {% endfor %}
+                    </select></th>
+                </tr>
+                <tr>
+                    <th><button type="submit">submit</button></th>
+                </tr>
+        
+            </table>
+
+        </form>   
+        </div>
+    </div>
+    <div class="col-4"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

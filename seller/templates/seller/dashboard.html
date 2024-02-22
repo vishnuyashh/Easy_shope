@@ -1,0 +1,92 @@
+{% extends 'seller/s_masterpage.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    #dashtable{
+    
+        border: 2px solid black;
+        text-align: center;
+        width: 1200px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 80px;
+        font-size: large;
+        
+    }
+    #dashtable  th {
+        border: 1px solid black;
+        width: 150px;
+        height: 50px;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+    }
+    #dashtable td{
+        border: 1px solid black;
+
+    }
+    
+
+</style>
+
+
+
+
+<div class="row">
+    <div class="col-12">
+        
+        <table id="dashtable">
+            <tr>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Update</th>
+                <th>Remove</th>
+            </tr>
+{% for i in product %}
+            
+            <tr>
+                
+                <td>{{i.name}}</td>
+                <td>{{i.description}}</td>
+                <td>{{i.category}}</td>
+                <td>{{i.quantity}}</td>
+                <td>{{i.price}}</td>
+                <td><img src="{{i.image.url}}" alt=""></td>
+                <td><a href="{% url 'seller:product_update' i.id %}">Update</a></td>
+                <td><a href="{% url 'seller:remove' i.id %}">Remove</a></td>
+                
+            </tr>
+            
+{% endfor %}
+        </table>
+       
+    </div>
+   
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
