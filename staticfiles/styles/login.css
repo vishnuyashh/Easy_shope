@@ -1,0 +1,46 @@
+#row2{
+    margin-top: 200px;
+}
+#button{
+    height: 80px;
+}
+#btn{
+    width: 80px;
+    background-color: rgba(44, 27, 143, 0.432);
+    color: white;
+    border-radius: 5px;
+    
+}
+#btn:hover{
+    background-color:rgba(3, 26, 88, 0.5);
+}
+span{
+    font-size: xx-large;
+    font-weight: 700;
+    font-style: italic;
+}
+#table1{
+    width: 300px;
+    height: 300px;
+    /* border-color: black; */
+    background-color: white;
+    text-align: center;
+    border-radius: 50px;
+
+}
+#username{
+    font-size: large;
+    margin-left: -80px;
+
+}
+#password{
+    font-size: large;  
+    margin-left: -80px;
+}
+label{
+    font-weight: 500;
+}
+.container{
+    height: 700px;
+    width: 1200px;
+}

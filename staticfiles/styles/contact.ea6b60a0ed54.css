@@ -1,0 +1,61 @@
+#contact_table td{
+    height: 10px;
+    width: 150px;
+}
+#contact_table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* border:1px solid red; */
+}
+.col-6 #contact_table{
+    /* border: 2px solid black; */
+    margin-left: 200px;
+    height: 500px;
+}
+ #c.col-6 {
+    /* border: 2px solid black */
+    background-color: #050505;
+}
+
+
+#submit{
+    margin-left: 150px;
+    border: none;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+}
+input{
+    width: 280px;
+    border-radius: 5px;
+    height: 40px;
+    text-decoration: none;
+}
+textarea{
+    height: 250px;
+    border-radius: 5px;
+    width: 280px;
+    text-decoration: none;
+    /* margin-bottom: 50px; */
+}
+#row5{
+    background-color: #877A77;
+}
+.col-12 h1{
+    margin-left: 550px;
+    font-weight:500 ;
+    font-style: oblique;
+    color: white;
+    margin-top: 25px;
+}
+#submit:hover{
+    transform: scale(1.1)translate(2px);
+    transition: .2s;
+}
+.col-6 #contactimg{
+    margin-top: 50px;
+    height: 400px;
+    width: 500px;
+}

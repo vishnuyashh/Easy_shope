@@ -2,8 +2,78 @@
 {% load static %}
 {% block content %}
 
+<style>
+    img{
+        height: 500px;
+        width: 700px;
+    }
+    #paymentbtn:hover{
+        background-color: orangered;
 
+    }
+    #paymentbtn{
+        background-color: rgb(40, 40, 189);
+        border-radius: 10px;
+        margin-top: 20px;
+        color: white;
+        width: 80px;
+        }
+</style>
 
+<div class="row" style="margin-top: 100px; margin-bottom: 100px">
+    <div class="col-6">
+        <img src="{% static 'images/paymentimg.jpg' %}" alt="">
+    </div>
+    <div class="col-6">
+        <h1>Confirm your payment</h1>
+       <form action="" method="post">
+        {% csrf_token %}
+        <table style="margin-left: 180px;">
+            <tr>
+                <td><label for="">Name</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Name"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Card Number</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" placeholder="Card Number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">CVV</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" placeholder="CVV Number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Expiration</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" id="paymentbtn">Confirm</button>
+                </td>
+            </tr>
+        </table>
+       </form>
+    </div>
+</div>
 
 
 
