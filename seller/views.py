@@ -8,11 +8,18 @@ def s_login(request):
     if request.method=='POST':
         username=request.POST['username']
         password=request.POST['password']
-        if Seller.objects.filter(username=username,password=password).exists():
+        try:
+            seller=Seller.objects.get(username=username,password=password)
+            request.session['seller']=seller.id
             return redirect('seller:s_index')
-        else:
-            return render(request,'s_login.html',{'msg':'invalid'})
+        except Seller.DoesNotExist:
+            return render(request,'seller/s_login.html',{'msg':'invalid'})
     return render(request,'seller/s_login.html')
+
+def s_logout(request):
+    if 'seller' in request.session:
+        del request.session['seller']
+        return redirect('seller:s_login')
 
 def s_register(request):
     if request.method=='POST':

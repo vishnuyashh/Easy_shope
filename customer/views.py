@@ -10,15 +10,20 @@ def login(request):
     if request.method=='POST':
        username=request.POST['username']
        password=request.POST['password']
-       if Customer.objects.filter(username=username,password=password).exists():
-        return redirect('customer:index')
-       else:
-
+       try:
+         cust=Customer.objects.get(username=username,password=password)
+         request.session['customer']=cust.id
+         return redirect('customer:index')
+       except Customer.DoesNotExist:    
          return render(request,'login.html',{'msg':'invalid'})
     return render(request,'login.html')
 
-def register(request):
+def logout(request):
+   if 'customer' in request.session:
+      del request.session['customer']
+      return redirect('customer:login')
    
+def register(request):
     if request.method=='POST':
        username=request.POST['username']
        password=request.POST['password']
@@ -42,4 +47,11 @@ def contact(request):
 
 def about(request):
     return render(request,'about.html')
+
+def cart(request):
+   return render(request,'cart.html')
+
+
+def payment(request):
+   return render(request,'payment.html')
 

@@ -1,0 +1,107 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    #cart_table{
+        width: 1200px;
+        
+
+    }
+
+    #cart_table th {
+        height: 50px;
+        font-size: large;
+        /* border: 1px solid black; */
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        
+    }
+
+</style>
+
+<div class="row"  style="margin-bottom: 40px;">
+    <h1>Shopping Cart</h1>
+</div>
+
+<div class="row"style="margin-bottom: 70px;">
+    <div class="col-1">
+
+    </div>
+    <div class="col-10">
+        <table id="cart_table">
+            <tr>
+                <th style="width: 600px;">Product</th>
+                <th style="width: 200px;">Price</th>
+                <th style="width: 200px;;">Quantity</th>
+                <th style="width: 2oopx;">Subtotal</th>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/men1.jpg' %}" alt="">
+                    <b>Summer T-shirt</b>
+                </td>
+                <td>$125.89</td>
+                <td>4</td>
+                <td>$125.89</td>
+            </tr>
+            <tr>
+                <th>Promotion Code</th>
+                <td></td>
+                <td><b>Cart Totals</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Coupon Code">
+                    <button type="submit" style="background-color: blue; border-radius: 20px; color: white;">Apply Coupon</button>
+                </td><td></td>
+                <td><b>Subtotal</b></td>
+                <td>$125.435</td>
+            </tr>
+            <tr>
+                <td></td><td></td>
+                <td><b>Total</b></td>
+                <td><b>$125.4345</b></td>
+            </tr>
+            <tr>
+               <td><td><td><td><button type="submit" style="margin-top: 20px; border-radius: 20px; background-color: blue; color: white;">Proceed TO Checkout</button></td></td></td></td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="col-1" >
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
