@@ -22,6 +22,8 @@ def logout(request):
    if 'customer' in request.session:
       del request.session['customer']
       return redirect('customer:login')
+   else:
+      return render(request,'login.html')
    
 def register(request):
     if request.method=='POST':
@@ -37,10 +39,15 @@ def masterpage(request):
     return render(request,'masterpage.html')
 
 def men(request):
-    return render(request,'men.html')
+    cat=Category.objects.get(name='men')
+    pdt=Product.objects.filter(category=cat)
+    return render(request,'men.html',{'products':pdt})
 
 def women(request):
-    return render(request,'women.html')
+    cat=Category.objects.get(name='women')
+    pdt=Product.objects.filter(category=cat)
+    return render(request,'women.html',{'products':pdt})
+    
 
 def contact(request):
     return render(request,'contact.html')
@@ -50,7 +57,6 @@ def about(request):
 
 def cart(request):
    return render(request,'cart.html')
-
 
 def payment(request):
    return render(request,'payment.html')

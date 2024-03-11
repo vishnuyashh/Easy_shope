@@ -12,6 +12,8 @@
         margin-bottom: 50px;
         margin-left: 80px;
         font-size: large;
+        font-weight: 500;
+        color: white;
         
     }
     #dashtable  th {
@@ -34,7 +36,7 @@
 
 
 
-<div class="row">
+<div class="row" style="background-image: url('https://i.pinimg.com/564x/28/6c/9b/286c9bf42516e21c9c87e360ac2441ee.jpg');">
     <div class="col-12">
         
         <table id="dashtable">
@@ -58,8 +60,8 @@
                 <td>{{i.quantity}}</td>
                 <td>{{i.price}}</td>
                 <td><img src="{{i.image.url}}" alt=""></td>
-                <td><a href="{% url 'seller:product_update' i.id %}">Update</a></td>
-                <td><a href="{% url 'seller:remove' i.id %}">Remove</a></td>
+                <td><a href="{% url 'seller:product_update' i.id %}" style="text-decoration: none; color:white;"><i class="fa-solid fa-pen"></i></a></td>
+                <td><a href="{% url 'seller:remove' i.id %}" style="color: white;"><i class="fa-solid fa-trash"></i></a></td>
                 
             </tr>
             

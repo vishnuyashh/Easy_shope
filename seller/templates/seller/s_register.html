@@ -5,16 +5,20 @@
 <style>
     #register_row{
         /* border: 1px solid black; */
-        margin-bottom: 50px;
-        margin-top: 40px;
+       
+        background-color:rgb(252, 150, 167);
     }
     #register_table{
         /* border: 1px solid black; */
         margin-left: 500px;
-        background-image: url('https://i.pinimg.com/736x/20/06/ca/2006caf34cf7b8b08e12acc0340d1b5e.jpg');
-        color: white;
+        background-image: url('https://i.pinimg.com/564x/94/b7/7b/94b77b22988e58089fbc7d864e01caf1.jpg');
+        color:black;
         width: 400px;
         border-radius: 10px;
+        margin-bottom: 50px;
+        margin-top: 40px;
+        box-shadow: 20px 20px 10px;
+        
     }
     input{
         width: 300px;
@@ -39,7 +43,7 @@
         padding-left: 75px;
     }
     #loginbtn a{
-        color: white;
+        color:black;
     }
     #loginbtn a:hover{
         color: red;
@@ -54,42 +58,42 @@
 <div class="row" id="register_row">
         <form action="" method="post" onsubmit="return register()">
             {% csrf_token %}
-        <table id="register_table">
-            <tr>
-                <td><h1>Register</h1></td>
-            </tr>
-            <tr>
-                <td><label for="">Username</label></td><br>
-            </tr>
-            <tr>
-                <td><input type="text" name="username" placeholder="Enter username" id="user"><br><p id="para1"></p></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email</label></td>
-            </tr>
-            <tr>
-                <td><input type="email" name="email" placeholder="Enter email" id="email"><br><p id="para2"></p></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password</label></td>
-            </tr>
-            <tr>
-                <td><input type="password" name="password" placeholder="Enter Password" id="psd"><br><p id="para3"></p></td>
-            </tr>
-            <tr>
-                <td><label for=""></label>Repeat Password</td>
-            </tr>
-            <tr>
-                <td><input type="password"  placeholder="Repeat Password" id="repeat"><br><p id="para4"></p><p id="para4"></p></td>
-            </tr>
-            <tr>
-                <td><button id="registerbtn" type="submit">Register</button></td>
-            </tr>
-            <tr>
-                <td id="loginbtn">Already have an account? <a href="{% url 'seller:s_login' %}">Login</a></td>
-            </tr>
-
-        </table>
+            <table id="register_table">
+                <tr>
+                    <td><h1>Register</h1></td>
+                </tr>
+                <tr>
+                    <td><label for="">Username</label></td><br>
+                </tr>
+                <tr>
+                    <td><input type="text" name="username" placeholder="Enter username" id="user"><br><p id="para1"></p></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                </tr>
+                <tr>
+                    <td><input type="email" name="email" placeholder="Enter email" id="email"><br><p id="para2"></p></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" placeholder="Enter Password" id="psd"><br><p id="para3"></p></td>
+                </tr>
+                <tr>
+                    <td><label for=""></label>Repeat Password</td>
+                </tr>
+                <tr>
+                    <td><input type="password"  placeholder="Repeat Password" id="repeat"><br><p id="para4"></p><p id="para4"></p></td>
+                </tr>
+                <tr>
+                    <td><button id="registerbtn" type="submit">Register</button></td>
+                </tr>
+                <tr>
+                    <td id="loginbtn">Already have an account? <a href="{% url 'seller:s_login' %}">Login</a></td>
+                </tr>
+    
+            </table>
     </form>
 </div>
 

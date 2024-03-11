@@ -20,6 +20,8 @@ def s_logout(request):
     if 'seller' in request.session:
         del request.session['seller']
         return redirect('seller:s_login')
+    else:
+        return render(request,'seller/s_login.html')
 
 def s_register(request):
     if request.method=='POST':

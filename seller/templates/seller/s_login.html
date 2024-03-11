@@ -9,8 +9,11 @@
         margin-left: 500px;
         color: white;
         /* border: 1px solid black; */
-        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/011/635/825/small/abstract-square-interface-modern-background-concept-fingerprint-digital-scanning-visual-security-system-authentication-login-vector.jpg');
+        background-image: url('https://i.pinimg.com/564x/e7/25/92/e72592a35cccdb247afd8e495e90458c.jpg');
         border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        box-shadow: 20px 20px 10px black;
 
     }
     input{
@@ -21,8 +24,8 @@
         margin-left: 30px;
     }
     #logintable{
-        margin-top: 100px;
-        margin-bottom: 100px;
+        
+        background-color: rgb(241, 148, 7);
         
 
     }
@@ -30,7 +33,7 @@
         text-decoration: none;
         width: 70px;
         color: white;
-        background-color: rgba(37, 33, 33, 0.849);
+        background-color: rgba(223, 74, 15, 0.849);
         border-radius: 5px;
         margin-left: 165px;
     }
@@ -38,7 +41,7 @@
         height: 50px;
     }
     #btn:hover{
-        background-color: rgba(24, 23, 23, 0.164);
+        background-color: rgba(233, 114, 16, 0.164);
 
     }
     #para,#para2{
@@ -50,16 +53,20 @@
         width: 80px;
         margin-left: 160px;
         margin-bottom: 50px;
-        background-color: rgba(141, 17, 141, 0.973);
+        background-color: rgba(216, 170, 21, 0.973);
         color: white;
     }
     #signup:hover{
-        background-color: rgba(8, 8, 90, 0.753);
+        background-color: rgba(19, 19, 167, 0.048);
         
     }
     #parasign{
         margin-left: 140px;
         margin-top: 30px;
+    }
+    #msg{
+        padding-left: 40px;
+        color: red;
     }
 
 
@@ -84,8 +91,7 @@
                 <td><label for="password" id="password">Password</label></td>
             </tr>
             <tr>
-                <td><input type="password" name="password" placeholder="Type your password" id="password1"><br><p id="para2" style="color: red;"></p></td>
-                <td><p>{{msg}}</p></td>
+                <td><input type="password" name="password" placeholder="Type your password" id="password1"><br><p id="para2" style="color: red;"></p><p id="msg">{{msg}}</p></td>
                 
             </tr>
             <tr>

@@ -6,111 +6,23 @@
     <h1 style="color: #B40431;">𝙻𝚎𝚝'𝚜 𝙴𝚡𝚙𝚕𝚘𝚛𝚎 Men's 𝚆𝚎𝚊𝚛</h1>
 </div>
 
+
 <div class="row" style="margin-top: 30px; margin-left: 20px;">
+  {% for i in products %}
     <div class="col-3">
         <div class="card" style="width: 18rem;">
-        <img src="{% static 'images/menhtml1.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
+        <img src="{{i.image.url}}" class="card-img-top" alt="..."  style="height: 480px;">
         <div class="card-body">
-          <h5 class="card-title">Roadster</h5>
-          <p class="card-text">67% off <h4>Rs 1999</h4> </p>
-          <a href="#" class="btn btn-primary">Buy now</a>
-          <a href="#" class="btn btn-primary">Add to cart</a>
-
-          
-        </div>
-      </div></div>
-
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/menhtml2.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-            <div class="card-body">
-              <h5 class="card-title">Clinch Fashion</h5>
-              <p class="card-text">59% off <h4>Rs 2599</h4></p>
-              <a href="#" class="btn btn-primary">Buy now</a>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/menhtml3.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-            <div class="card-body">
-              <h5 class="card-title">KETECH</h5>
-              <p class="card-text">74% off <h4>Rs 1499</h4></p>
-              <a href="#" class="btn btn-primary">Buy now</a>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/menhtml4.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-            <div class="card-body">
-              <h5 class="card-title">BLUEMARTIN</h5>
-              <p class="card-text" >52% off <h4>Rs 1799</h4></p>
-              <a href="#" class="btn btn-primary">Buy now</a>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-
-
-</div>
-
-
-<div class="row" style="margin-top: 30px; margin-left: 20PX;">
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-        <img src="{% static 'images/menhtml5.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-        <div class="card-body">
-          <h5 class="card-title">Dennis Lingo</h5>
-          <p class="card-text">77% off <h4>Rs 1599</h4> </p>
+          <h5 class="card-title">{{i.name}}</h5>
+          <p class="card-text">67% off <h4>Rs {{i.price}}</h4> </p>
           <a href="#" class="btn btn-primary">Buy now</a>
           <a href="#" class="btn btn-primary">Add to cart</a>
         </div>
-      </div></div>
-
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/menhtml6.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-            <div class="card-body">
-              <h5 class="card-title">VTEXX</h5>
-              <p class="card-text">49% off <h4>Rs 1199</h4></p>
-              <a href="#" class="btn btn-primary">Buy now</a>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
+      </div>
     </div>
-
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/menhtml7.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-            <div class="card-body">
-              <h5 class="card-title">THE BEAR HOUSE</h5>
-              <p class="card-text">47% off <h4>Rs 1899</h4></p>
-              <a href="#" class="btn btn-primary">Buy now</a>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-
-    <div class="col-3">
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/menhtml8.jpg' %}" class="card-img-top" alt="..."  style="height: 480px;">
-            <div class="card-body">
-              <h5 class="card-title">THOMAS SCOTT</h5>
-              <p class="card-text" >65% off <h4>Rs 1499</h4></p>
-              <a href="{% url 'customer:payment' %}" class="btn btn-primary">Buy now</a>
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-    </div>
-
+    {% endfor %}
 
 </div>
-
 
 
 

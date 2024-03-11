@@ -1,108 +1,150 @@
+{% extends 'masterpage.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+{% block content %}
 
 
-    <style>
-        #table1{
-            background-image:url('https://i.pinimg.com/originals/a7/1e/11/a71e115eee79fdc3b02aa458d0d12359.jpg');
-            /* background-image: url('https://media.istockphoto.com/id/1471902206/photo/high-speed-security-technology-and-data-protection-concept-with-digital-closed-padlock-symbol.webp?b=1&s=170667a&w=0&k=20&c=7hhOK68aiPeIqyWSl0N8r4wChZQntj4H755Q3Y388cM='); */
-            height: 400px; 
-            color: white;
+<style>
+    #seller_table{
+        height: 400px;
+        width: 400px;
+        margin-left: 350px;
+        color: white;
+        /* border: 1px solid black; */
+        background-image: url('https://i.pinimg.com/564x/fe/6c/27/fe6c27628a38ccc348e2a4795e3c932b.jpg');
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        box-shadow: 20px 20px 10px black;
 
-        }
-        #table1 td{
-            height: -20px;
-        }    
-        .container{
-            background-color:white;
-        }   
-        #table1 td {
-            width: 250px;
-        }
-        #table1 input{
-            width: 250px;
-        }
-        #username{
-            padding-right: 70px;
-        }
-        #password{
-            padding-right: 70px;
-        }
+    }
+    input{
+        width: 350px;
+        margin-left: 30px;
+    }
+    label{
+        margin-left: 30px;
+    }
+    #logintable{
         
-           
-    </style>
-</head>
+        /* background-color:rgb(252, 150, 167); */
+        background-image: url('https://vistapointe.net/images/elegance--1.jpg');
+        /* size: 1200px; */
+
+    }
+    #btn{
+        text-decoration: none;
+        width: 70px;
+        color: white;
+        background-color: rgba(49, 47, 46, 0.849);
+        border-radius: 5px;
+        margin-left: 165px;
+    }
+    #loginbtn{
+        height: 50px;
+    }
+    #btn:hover{
+        background-color: rgba(14, 7, 3, 0.075);
+
+    }
+    #para,#para2{
+        margin-left: 30px;
+    }
+    #signup{
+        text-decoration: none;
+        border-radius: 5px;
+        width: 80px;
+        margin-left: 160px;
+        margin-bottom: 50px;
+        background-color: rgba(66, 64, 57, 0.973);
+        color: white;
+    }
+    #signup:hover{
+        background-color: rgba(19, 19, 167, 0.048);
+        
+    }
+    #parasign{
+        margin-left: 140px;
+        margin-top: 30px;
+    }
 
 
 
-<body >
-    <div class="container" style="background-image: url('https://img.freepik.com/free-photo/beautiful-blue-border-leaves-pink-background_24972-574.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1708041600&semt=ais');">
-        <div class="row" id="row1"></div>
-        <div class="row" id="row2">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <form action="" method="post" onsubmit="return login()">
-                    {% csrf_token %}
-                    <table id="table1">
-                        <tr>
-                            <td><span>Login</span><br><br></td>
-                        </tr>
-                        <tr>
-                            <td><label for="username" id="username" >Username</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="username" placeholder="Type your username" id="user"><br><p id="para" style="color: red;"></p></td>
-                            
-                        </tr>
-                        <tr>
-                            <td><label for="password" id="password">Password</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="password" name="password" placeholder="Type your password" id="password1"><br><p id="para2" style="color: red;"></p>
-                            <p>{{msg}}</p></td>
-                            
-                        </tr>
-                        <tr>
-                            <td id="button"><button type="submit" id="btn">Login</button></td>
-                        </tr>
-                        <tr>
-                            <td>
-                               <a href="">Forgot Password</a>  Or
-                               <a href="{% url 'customer:register' %}">Sign Up</a>
+</style>
 
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
-            <div class="col-4"></div>
-        </div>
-    </div>
+<div class="row" id="logintable">
+    <form action="" method="post" onsubmit="return login()">
+        {% csrf_token %}
+        <table id="seller_table">
+            <tr>
+                <th><h1>Login</h1></th>
+            </tr>
+            <tr>
+                <td><label for="username" id="username" >Username</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="username" placeholder="Type your username" id="user"><br><p id="para" style="color: red;"></p></td>
+                
+            </tr>
+            <tr>
+                <td><label for="password" id="password">Password</label></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="password" placeholder="Type your password" id="password1"><br><p id="para2" style="color: red;"><p style="padding-left: 40px; color: red;">{{msg}}</p></p><br></td>
+                
+                
+            </tr>
+            <tr>
+                <td id="loginbtn"><button type="submit" id="btn">Login</button></td> 
+            </tr>
+            <tr>
+                <td><p id="parasign"> Or Sign Up using</p><button id="signup"> <a href="{% url 'customer:register' %}">Sign Up</a> </button></td>
+
+            <tr>
+                
+            </tr>
+        </table>
+    </form>
 
 
 
     <script>
         function login(){
+           
             user=document.getElementById('user').value
             psd=document.getElementById('password1').value
             if(user==''){
                 document.getElementById('para').innerHTML='Please enter username'
                 return false
             }else if(psd==''){
+                
                 document.getElementById('para2').innerHTML='Please enter password'
                 return false
             }return true
         }
 
     </script>
-    
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
-</body>
-</html>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
