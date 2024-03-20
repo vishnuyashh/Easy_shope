@@ -7,10 +7,11 @@
         /* border: 1px solid black; */
        
         background-image: url('https://wallpaperset.com/w/full/0/1/8/156429.jpg');
+        background-size: cover;
     }
     #register_table{
         /* border: 1px solid black; */
-        margin-left: 850px;
+        margin-left: 650px;
         background-image: url('https://vistapointe.net/images/elegance--1.jpg');
         color:white;
         width: 400px;
@@ -121,6 +122,7 @@
             return false
         }else if(pass!=pass2){
             document.getElementById('para4').innerHTML='both password must be same'
+            return false
         }else{
             
         }return true

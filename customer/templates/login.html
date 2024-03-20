@@ -7,7 +7,7 @@
     #seller_table{
         height: 400px;
         width: 400px;
-        margin-left: 350px;
+        margin-left: 150px;
         color: white;
         /* border: 1px solid black; */
         background-image: url('https://i.pinimg.com/564x/fe/6c/27/fe6c27628a38ccc348e2a4795e3c932b.jpg');
@@ -26,9 +26,10 @@
     }
     #logintable{
         
+        
         /* background-color:rgb(252, 150, 167); */
         background-image: url('https://vistapointe.net/images/elegance--1.jpg');
-        /* size: 1200px; */
+        background-size: cover;
 
     }
     #btn{
@@ -66,6 +67,7 @@
         margin-left: 140px;
         margin-top: 30px;
     }
+    
 
 
 
@@ -119,7 +121,10 @@
                 
                 document.getElementById('para2').innerHTML='Please enter password'
                 return false
-            }return true
+            }else{
+                return true
+            }
+            
         }
 
     </script>

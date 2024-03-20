@@ -2,33 +2,54 @@
 {% extends 'masterpage.html' %}
 {% load static %}
 {% block content %}
+<style>
+#bsbtn{
+  border: none; 
+}
+#bsbtn:hover{
+  transform: scale(1.1)translate(1px);
+    transition: .1s;
+}
+#bsbtntable{
+  width: 900px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+ 
+</style>
 
 <div class="row">
-  <input type="text" placeholder="Search For Styles, Brands & More" style="width: 500px; margin-left: 400px; margin-top: 20px; margin-bottom: 10px;">
-  <i class="fa-regular fa-user" style="width: 500px; margin-left: 920px; margin-top: -40px; margin-bottom: 10px;"> <span>Account</span></i>
-  <i class="fa-regular fa-heart" style="width: 500px; margin-left: 1050px; margin-top: -40px; margin-bottom: 10px;"> <span>Whishlist</span></i>
-  <button style="color: black;width: 150px;text-decoration: none;  margin-top: -40px; margin-left: 1200px; margin-bottom: 10px; border-radius: 5px; background-color:#ca2f0d;"><a href="{% url 'seller:s_index' %}" style="color:white;"  >Become A Seller</a></button>
+  <table id="bsbtntable">
+    <tr>
+      <td>
+        <input type="text" placeholder="Search For Styles, Brands & More" style="width: 500px; text-align: center;"></td>
+      <td><i class="fa-regular fa-user"> <span><a href="{% url 'customer:wishlist' %}" style="font-family: sans-serif; text-decoration: none; color: black;">Account</a></span></i></td>
+      <td><i class="fa-regular fa-heart"> <span><a href="{% url 'customer:wishlist' %}" style="font-family: sans-serif; text-decoration: none; color: black;">Whishlist</a></span></i></td>
+      <td> <button id="bsbtn" style=" border-radius: 5px; background-color:#ca2f0d;"><a href="{% url 'seller:s_index' %}" style="color:white;"  >Become A Seller</a></button></td>
+    </tr>
+  </table>
 </div>
+
 
 <div class="row" style="margin-top: 30px;">
-  <div class="col-12"><img src="{% static 'images/indeximg8.jpg' %}" alt="" style="height: 400px; width: 1320px; margin-left: 20px;"></div>
+  <div class="col-12"><img src="{% static 'images/indeximg8.jpg' %}" alt="" style="height: 400px; width: 1215px;">
 </div>
 
-<div class="row" style="margin-left: 70px; margin-top:50px;">
-  <div class="col-3"> <img src="{% static 'images/dp1.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
-    <h4 style="margin-left:60px;">Indian</h4>
+<div class="row" style=" margin-top:50px;">
+  <div class="col-3"> <img src="{% static 'images/dp1.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px; margin-left: 50px;">
+    <h4 style="margin-left:110px;">Indian</h4>
   </div>
   <div class="col-3">
-    <img src="{% static 'images/dp2.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
-    <h4 style="margin-left:60px;">Western</h4>
+    <img src="{% static 'images/dp2.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px; margin-left: 50px;">
+    <h4 style="margin-left:110px;">Western</h4>
   </div>
   <div class="col-3">
-    <img src="{% static 'images/dp3.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
-    <h4 style="margin-left:60px;">Women</h4>
+    <img src="{% static 'images/dp3.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;margin-left: 50px;">
+    <h4 style="margin-left:110px;">Women</h4>
   </div>
   <div class="col-3">
-  <img src="{% static 'images/dp4.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
-    <h4 style="margin-left:60px;">Men</h4>
+  <img src="{% static 'images/dp4.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px; margin-left: 50px;">
+    <h4 style="margin-left:115px;">Men</h4>
   </div>
 </div>
 
@@ -57,17 +78,17 @@
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <!-- <span class="visually-hidden">Previous</span> -->
+
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <!-- <span class="visually-hidden">Next</span> -->
+    
     </button>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-12"><img src="{% static 'images/indeximg9.jpg' %}" alt="" style="height: 500px; width: 1320px; margin-left: 20px;"></div>
+  <div class="col-12"><img src="{% static 'images/indeximg9.jpg' %}" alt="" style="height: 500px; width: 1200px;"></div>
 </div>
 
 <div class="row">
@@ -75,15 +96,15 @@
 </div>
 
 <div class="row" style="margin-top: 20px;">
-  <div class="col-6"><img src="{% static 'images/indeximg6.jpg' %}" alt="" style="height: 450px; width: 640px; margin-left: 20px;"></div>
-  <div class="col-6"><img src="{% static 'images/indeximg5.jpg' %}" alt="" style="height: 450px; margin-left: 10px;"></div>
+  <div class="col-6"><img src="{% static 'images/indeximg6.jpg' %}" alt="" style="height: 450px; width: 600px;"></div>
+  <div class="col-6"><img src="{% static 'images/indeximg5.jpg' %}" alt="" style="height: 450px; width: 600px;"></div>
 </div>
 
 <div class="row" style="margin-top: 30px;">
   <h1 style="text-align: center;color:#2C3E50; ">“𝐘𝐨𝐮 𝐝𝐨𝐧’𝐭 𝐟𝐢𝐧𝐝 𝐚 𝐬𝐭𝐲𝐥𝐞. 𝐀 𝐬𝐭𝐲𝐥𝐞 𝐟𝐢𝐧𝐝𝐬 𝐲𝐨𝐮.”</h1>
 </div>
 
-<div class="row" style="margin-left: 70px; margin-top:50px;">
+<div class="row" style="margin-left: 50px; margin-top:50px;">
   <div class="col-3"> <img src="{% static 'images/dpmen2.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
     <h4 style="margin-left:60px;">Coat</h4>
   </div>
@@ -103,7 +124,7 @@
 
 
 
-<div class="row" style="margin-left: 20px; margin-top: 50px">
+<div class="row" style=" margin-top: 50px">
   <div class="col-3"><div class="card" style="width: 18rem;">
     <img src="{% static 'images/men1.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
     
@@ -131,7 +152,7 @@
   <h2 style="color:#4D5656; text-align: center;">꧁ღ⊱♥ "I want people to see the dress, but focus on the woman." ♥⊱ღ꧂</h2>
 </div>
 
-<div class="row" style="margin-left: 70px; margin-top:50px; margin-bottom: 50px;">
+<div class="row" style="margin-left: 50px; margin-top:50px; margin-bottom: 50px;">
   <div class="col-3"> <img src="{% static 'images/dpwomen1.jpg' %}" alt="" style="border-radius: 500px; width: 200px; height: 200px;;">
     <h4 style="margin-left:60px;">Saree</h4>
   </div>
@@ -150,7 +171,7 @@
 </div>
 
 
-<div class="row" style="margin-left: 20px; margin-top: 40px; margin-bottom: 20px;">
+<div class="row" style="margin-top: 40px; margin-bottom: 50px;">
   <div class="col-3"><div class="card" style="width: 18rem;">
     <img src="{% static 'images/women6.jpg' %}" class="card-img-top" alt="..." style="height: 430px;">
     

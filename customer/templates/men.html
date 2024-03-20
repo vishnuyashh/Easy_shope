@@ -2,21 +2,48 @@
 {% load static %}
 {% block content %}
 
+<style>
+  #love{
+    text-decoration: none;
+    font-size: x-large;
+  }
+  #love:hover{
+    background-color: red;
+  }
+  #lovebtbn{
+    margin-left: 50px;
+  }
+  #lovebtn2{
+    text-decoration: none;
+    border: none;
+    background-color: white;
+  }
+</style>
+
 <div class="row" style="text-align: center;">
     <h1 style="color: #B40431;">𝙻𝚎𝚝'𝚜 𝙴𝚡𝚙𝚕𝚘𝚛𝚎 Men's 𝚆𝚎𝚊𝚛</h1>
 </div>
 
 
-<div class="row" style="margin-top: 30px; margin-left: 20px;">
+<div class="row" style="margin-bottom: 100px;">
   {% for i in products %}
     <div class="col-3">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem; margin-top: 50px">
         <img src="{{i.image.url}}" class="card-img-top" alt="..."  style="height: 480px;">
         <div class="card-body">
           <h5 class="card-title">{{i.name}}</h5>
-          <p class="card-text">67% off <h4>Rs {{i.price}}</h4> </p>
-          <a href="#" class="btn btn-primary">Buy now</a>
-          <a href="#" class="btn btn-primary">Add to cart</a>
+          <p class="card-text">57% off <h4>Rs {{i.price}}</h4> </p> 
+
+          <form action="{% url 'customer:add_to_wishlist' i.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit" id="lovebtn2"><p id="lovebtn"><i class="fa-regular fa-heart" id="love"></i></p></button>
+          </form>
+
+          <form action="{% url 'customer:add_to_cart' i.id %}" method="post">
+            {% csrf_token %}
+          <button type="submit" class="btn btn-primary">Add to cart</button>
+          <a href="{% url 'customer:payment' %}" class="btn btn-primary" style="margin-left: 30px;">Buy now</a>
+          </form>
         </div>
       </div>
     </div>

@@ -2,13 +2,53 @@
 {% load static %}
 {% block content %}
 
+<style>
+    #col_contact{
+        background-image: url('https://i.pinimg.com/564x/d4/7b/0d/d47b0d3ffba5f7d01646b3b57cad6e78.jpg');
+        
+        size: 300px 300px;
+    }
+    #row5{
+        background-image: url('https://i.pinimg.com/564x/d4/7b/0d/d47b0d3ffba5f7d01646b3b57cad6e78.jpg');
+        
+    }
+    #row4{
+        background-image: url('https://i.pinimg.com/564x/d4/7b/0d/d47b0d3ffba5f7d01646b3b57cad6e78.jpg');
+    }
+    #get{
+        font-weight: 600px;
+        font-style: oblique;
+        color: white;
+    }
+    #contact_table2{
+        margin-left: 150px;
+        margin-top: 50px;
+        text-align: center;
+        /* border: 1px solid white; */
+        color: white;
+        /* background-color: black; */
+        font-size:large;
+        line-height: 70px;
+        
+    }
+    input:hover{
+        background-color: rgb(26, 24, 24);
+    }
+    textarea:hover{
+        background-color:  rgb(26, 24, 24);;
+    }
+
+
+
+</style>
 <div class="row" id="row5">
-    <div class="col-12"><h1>GET IN TOUCH</h1></div><br>
+
 </div>
 <div class="row" id="row4">
     <div class="col-6" id="c.col-6">
+        <h1 id="get" style="margin-top: 50px;">GET IN TOUCH</h1>
         
-        <table id="contact_table">
+        <table id="contact_table" >
            <form action="">
             <tr>
                 <td><input type="text" placeholder="Name *"></td>
@@ -23,13 +63,41 @@
                 <td><textarea name=""  placeholder="Messege *" cols="30" rows="10"></textarea></td>
             </tr>
             <tr>
-                <td><button id="submit" type="submit">Submit</button></td>
+                <td><button id="submit" type="submit" style="width: 90px; margin-left: 100px; height: 40px;">Submit</button></td>
             </tr>
            </form>
         </table>
     </div>
-    <div class="col-6">
-        <img src="{% static 'images/contact.jpg' %}" alt="" id="contactimg">
+    <div class="col-6" id="col_contact">
+        <h1 id="get" style="margin-top: 50px; margin-left: 140px;">FIND US</h1>
+        <table id="contact_table2">
+            <tr>
+                <td ><i class="fa-solid fa-phone" style="color: white; width: 100px;"></i></td>
+                <td >+91-6238902834</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa-brands fa-whatsapp"  style="color: white;" ></i>
+
+                </td>
+                <td>+91-9846578332</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fa-regular fa-envelope" style="color: white;"> <a href="https://maps.app.goo.gl/9MPEBdRJefgegJu38"></a></i>
+                </td>
+                <td>easyshpoe@gmail.com</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://maps.app.goo.gl/E3EyXPv2un84ame59"><i class="fa-solid fa-location-dot" style="color: white;"></i></a>
+                </td>
+                <td>
+                   <a href="https://maps.app.goo.gl/E3EyXPv2un84ame59"><img src="{% static 'images/banglore.jpg' %}" alt=""></a> 
+                </td>
+            </tr>
+        </table>
+        </div>
     </div>
 </div>
 

@@ -1,0 +1,104 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<style>
+    #cart_table{
+        width: 1100px;
+        margin-left: -70px;
+        font-size: large;
+        text-align: center;
+        margin-bottom: 50px;
+
+        /* border: 1px solid black; */
+        
+
+    }
+
+    #cart_table th {
+        height: 50px;
+        font-size: large;
+        /* border: 1px solid black; */
+    }
+    img{
+        height: 200px;
+        width: 150px;
+        
+        
+    }
+ 
+
+</style>
+
+<div class="row"  style=" background-color:rgb(240, 222, 222)">
+    <h1 style="margin-top: 20px;margin-bottom: 30px;">My Whishlist</h1>
+</div>
+
+<div class="row"style="background-color:rgb(240, 222, 222)">
+    <div class="col-1">
+
+    </div>
+    <div class="col-10">
+       <form action="" method="post">
+        {% csrf_token %}
+        <table id="cart_table">
+            <tr>
+                <th style="width: 300px;">Product</th>
+                <th style="width: 300px;">Product Name</th>
+                <th style="width: 200px;">Price</th>
+                <th style="width: 200px;">Actions</th>
+                <th style="width: 200px;">Remove</th>
+                
+            </tr>
+            {% for item in wishlist_item %}
+            <tr>
+                <td><img src="{{item.products.image.url}}" alt=""></td>
+                <td><b>{{item.products.name}}</b></td>
+                <td>{{item.products.price}}</td>
+               <form action="{% url 'customer:add_to_cart' item.products.id %}" method="post">
+                {% csrf_token %}
+                <td><button type="submit">Add to Cart</button></td>
+
+               </form>
+               <form action="{% url 'customer:remove_from_wishlist' item.products.id %}" method="post">
+                {% csrf_token %}
+                <td><button type="submit">Remove</button></td>
+               </form>
+                
+            </tr>
+            {% endfor %}
+
+        </table>
+       </form>
+
+    </div>
+    <div class="col-1" >
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

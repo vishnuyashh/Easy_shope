@@ -40,11 +40,8 @@ textarea{
     text-decoration: none;
     /* margin-bottom: 50px; */
 }
-#row5{
-    background-color: #877A77;
-}
 .col-12 h1{
-    margin-left: 550px;
+    /* margin-left: 50px; */
     font-weight:500 ;
     font-style: oblique;
     color: white;
@@ -58,4 +55,8 @@ textarea{
     margin-top: 50px;
     height: 400px;
     width: 500px;
+}
+#col_contact{
+    background-image: url('https://i.pinimg.com/564x/68/2f/b8/682fb8d510e67918d639d0bdb94f70c5.jpg');
+    size: 300px 300px;
 }
