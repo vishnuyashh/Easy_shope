@@ -1,16 +1,17 @@
-{% extends 'masterpage.html' %}
+{% extends 'masterpage1.html' %}
 {% load static %}
 {% block content %}
 
-<div class="row" style="text-align: center;">
+<div class="container-fluid">
+  <div class="row" style="text-align: center;">
     <h1 style="color: #B40431;">𝙻𝚎𝚝'𝚜 𝙴𝚡𝚙𝚕𝚘𝚛𝚎 Women's 𝚆𝚎𝚊𝚛</h1>
 </div>
 
-<div class="row" style="margin-bottom: 100px; margin-left: 20px;">
+<div class="row" style="margin-bottom: 100px;">
   {% for i in products %}
     <div class="col-3">
         <div class="card" style="width: 18rem; margin-top: 50px">
-        <img src="{{i.image.url}}" class="card-img-top" alt="..."  style="height: 480px;">
+        <img src="{{i.image.url}}" class="card-img-top" alt="..."  style="height: 450px;">
         <div class="card-body">
           <h5 class="card-title">{{i.name}}</h5>
           <p class="card-text">67% off <h4>Rs {{i.price}}</h4> </p>
@@ -26,6 +27,7 @@
 
 </div>
 
+</div>
 
 
 

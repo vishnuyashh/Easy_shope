@@ -8,10 +8,10 @@ def index(request):
 
 def login(request):
     if request.method=='POST':
-       username=request.POST['username']
+       email=request.POST['email']
        password=request.POST['password']
        try:
-         cust=Customer.objects.get(username=username,password=password)
+         cust=Customer.objects.get(email=email,password=password)
          request.session['customer']=cust.id
          return redirect('customer:index')
        except Customer.DoesNotExist:    
@@ -38,6 +38,9 @@ def register(request):
 def masterpage(request):
     return render(request,'masterpage.html')
 
+def masterpage1(request):
+    return render(request,'masterpage1.html')
+
 def men(request):
    if 'customer' in request.session:
     cat=Category.objects.get(name='men')
@@ -47,9 +50,12 @@ def men(request):
       return redirect('customer:login')
 
 def women(request):
+   if 'customer' in request.session:
     cat=Category.objects.get(name='women')
     pdt=Product.objects.filter(category=cat)
     return render(request,'women.html',{'products':pdt})
+   else:
+      return redirect('customer:login')
     
 
 def contact(request):
@@ -108,4 +114,11 @@ def remove_from_wishlist(request,products_id):
    wishlist_item=Wishlist.objects.get(products=product)
    wishlist_item.delete()
    return redirect('customer:wishlist')
+
+def profile(request):
+   if 'customer' in request.session:
+    cust_id=request.session.get('customer') 
+    cust=Customer.objects.get(id=cust_id)
+        
+    return render(request,'profile.html',{'customer':cust})
 

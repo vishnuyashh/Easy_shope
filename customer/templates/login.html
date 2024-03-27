@@ -1,4 +1,4 @@
-{% extends 'masterpage.html' %}
+{% extends 'masterpage1.html' %}
 {% load static %}
 {% block content %}
 
@@ -73,65 +73,67 @@
 
 </style>
 
-<div class="row" id="logintable">
-    <form action="" method="post" onsubmit="return login()">
-        {% csrf_token %}
-        <table id="seller_table">
-            <tr>
-                <th><h1>Login</h1></th>
-            </tr>
-            <tr>
-                <td><label for="username" id="username" >Username</label></td>
-            </tr>
-            <tr>
-                <td><input type="text" name="username" placeholder="Type your username" id="user"><br><p id="para" style="color: red;"></p></td>
-                
-            </tr>
-            <tr>
-                <td><label for="password" id="password">Password</label></td>
-            </tr>
-            <tr>
-                <td><input type="password" name="password" placeholder="Type your password" id="password1"><br><p id="para2" style="color: red;"><p style="padding-left: 40px; color: red;">{{msg}}</p></p><br></td>
-                
-                
-            </tr>
-            <tr>
-                <td id="loginbtn"><button type="submit" id="btn">Login</button></td> 
-            </tr>
-            <tr>
-                <td><p id="parasign"> Or Sign Up using</p><button id="signup"> <a href="{% url 'customer:register' %}">Sign Up</a> </button></td>
+<div class="container-fluid">
+    <div class="row" id="logintable">
+        <form action="" method="post" onsubmit="return login()">
+            {% csrf_token %}
+            <table id="seller_table">
+                <tr>
+                    <th><h1 style="text-align: center;">Login</h1></th>
+                </tr>
+                <tr>
+                    <td><label for="email" id="email" >Email</label></td>
+                </tr>
+                <tr>
+                    <td><input type="email" name="email" placeholder="Type your email" id="user"><br><p id="para" style="color: red;"></p></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="password" id="password">Password</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="password" placeholder="Type your password" id="password1"><br><p id="para2" style="color: red;"><p style="padding-left: 40px; color: red;">{{msg}}</p></p><br></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td id="loginbtn"><button type="submit" id="btn">Login</button></td> 
+                </tr>
+                <tr>
+                    <td><p id="parasign"> Or Sign Up using</p><button id="signup"> <a href="{% url 'customer:register' %}">Sign Up</a> </button></td>
+    
+                <tr>
+                    
+                </tr>
+            </table>
+        </form>
+    
+    
 
-            <tr>
-                
-            </tr>
-        </table>
-    </form>
-
-
-
-    <script>
-        function login(){
-           
-            user=document.getElementById('user').value
-            psd=document.getElementById('password1').value
-            if(user==''){
-                document.getElementById('para').innerHTML='Please enter username'
-                return false
-            }else if(psd==''){
-                
-                document.getElementById('para2').innerHTML='Please enter password'
-                return false
-            }else{
-                return true
-            }
-            
-        }
-
-    </script>
-
+    
+    </div>
+    
 </div>
 
+<script>
+    function login(){
+       
+        user=document.getElementById('user').value
+        psd=document.getElementById('password1').value
+        if(user==''){
+            document.getElementById('para').innerHTML='Please enter email'
+            return false
+        }else if(psd==''){
+            
+            document.getElementById('para2').innerHTML='Please enter password'
+            return false
+        }else{
+            return true
+        }
+        
+    }
 
+</script>
 
 
 

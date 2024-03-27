@@ -1,4 +1,4 @@
-{% extends 'masterpage.html' %}
+{% extends 'masterpage1.html' %}
 {% load static %}
 {% block content %}
 
@@ -56,12 +56,13 @@
 
 </style>
 
-<div class="row" id="register_row">
+<div class="container-fluid">
+    <div class="row" id="register_row">
         <form action="" method="post" onsubmit="return register()">
             {% csrf_token %}
             <table id="register_table">
                 <tr>
-                    <td><h1>Register</h1></td>
+                    <td><h1 style="text-align: center;">Register</h1></td>
                 </tr>
                 <tr>
                     <td><label for="">Username</label></td><br>
@@ -98,6 +99,7 @@
     </form>
 </div>
 
+</div>
 <script>
     function  register(){
         user=document.getElementById('user').value

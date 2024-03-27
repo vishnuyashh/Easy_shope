@@ -1,0 +1,133 @@
+{% extends 'masterpage1.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="">
+
+<style>
+    #profile_table{
+        width: 400px;
+        text-align: center;
+        margin-left: 10px;
+        box-shadow: 4px 4px 3px;
+        color: black;
+       
+       
+    }
+    #profile_table th{
+        padding-left: 20px;
+    }
+    #table_box2{
+        /* border: 1px solid black; */
+        text-align: center;
+        margin-top: 20px;
+    }
+    .box{
+        box-shadow: 10px 10px 10px black;
+        border-radius: 20px;
+        color: white;
+    }
+    #profile_row{
+        /* background-image: url('https://www.hotwaxsystems.com/hubfs/Imported_Blog_Media/AdobeStock_72884317-3.jpeg'); */
+        
+    }
+    #wishlist{
+        text-decoration: none;
+        color: black;
+    }
+    #love_symbol{
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row" id="profile_row">
+        <div class="col-4"></div>
+        <div class="col-4" >
+            <div class="box" style="margin-top: 20px;margin-bottom: 30px;  background-color: rgb(231, 23, 151);">
+                <div class="img" style="margin-top: 40px; margin-bottom: 20px;">
+                    <img src="{% static 'images/dpwomen3.jpg' %}" alt="" style="border-radius: 500px; width: 150px; height: 150px;margin-left: 130px; margin-top: 10px;">
+                    <table style="margin-left: 180px;">
+                        
+                        <tr>
+                            <th>{{customer.username}}</th>
+                        </tr>
+                        <tr>
+                            <th>{{customer.email}}</th>
+                        </tr>
+                        
+                    </table>
+                  </div>
+                <div class="box1">
+                    <table id="profile_table">
+                        <tr>
+                            <th>
+                                <i class="fa-brands fa-wpforms" style="font-size: x-large;"></i>
+                            </th>
+                            <th>
+                                <a href="{% url 'customer:wishlist' %}" id="love_symbol"><i class="fa-regular fa-heart" style="font-size: x-large;"></i></a>
+                            </th>
+                            <th>
+                                <i class="fa-regular fa-bell" style="font-size: x-large;"></i>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>My Order</th>
+                            <th> <a href="{%  url 'customer:wishlist' %}" id="wishlist">wishlist</a></th>
+                            <th>Notifications</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="box2">
+                    <table id="table_box2" style=" width: 421px; height: 300px;">
+                        <tr>
+                            <th><i class="fa-solid fa-indian-rupee-sign"></i></th>
+                            <th style="text-align: left;">My Clues Bucks</th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-regular fa-user"></i></th>
+                            <th style="text-align: left;">My Profile</th>
+                           
+                           
+                        </tr>
+                        <tr>
+                            <th><i class="fa-solid fa-location-dot"></i></th>
+                            <th style="text-align: left;">Location</th>
+                            
+                        </tr>
+                        <tr>
+                            <th><i class="fa-regular fa-message"></i></th>
+                            <th style="text-align: left;">My Chat</th>
+                        </tr>
+                        <tr>
+                            <th><i class="fa-regular fa-star"></i></th>
+                            <th style="text-align: left;">Rte Your Purchase</th>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

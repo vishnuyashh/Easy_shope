@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'styles/masterpage.css' %}">
     <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
-    <link rel="stylesheet" href="">
 
     <style>
 
@@ -118,7 +117,7 @@ button a{
             <div class="col-8">
                 <table id="table1">
                     <tr>
-                        <td><button><a href="{% url 'customer:index' %}">Home</a></button></td>
+                        <td><button><a href="{% url 'customer:women' %}">Home</a></button></td>
                         <td><div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Shope
@@ -126,7 +125,6 @@ button a{
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="{% url 'customer:men' %}">Men</a></li>
                               <li><a class="dropdown-item" href="{% url 'customer:women' %}">Women</a></li>
-                              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                             </ul>
                           </div></td>
                           <td><button><a href="{% url 'customer:contact' %}">Contact</a></button></td>
@@ -144,6 +142,7 @@ button a{
     {% block content %}
        
     {% endblock %}
+    
     <div class="row" id="row2">
         <div class="col-4" id="more">
 

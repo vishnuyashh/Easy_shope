@@ -1,20 +1,15 @@
 #i.col-6{
     background-color: white;
 }
-#indeximg3{
-    height: 480px;
-    width: 650px;
-    margin-left: 20px;
 
-}
 .row h1{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#ind_col-6{
-    margin-bottom: 40px;
-}
+/* #ind_col-6{ */
+    /* margin-bottom: 40px; */
+/* } */
 .row #inputbox_index{
     width: 400px;
     margin-left: 300px;

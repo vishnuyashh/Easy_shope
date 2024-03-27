@@ -1,4 +1,4 @@
-{% extends 'masterpage.html' %}
+{% extends 'masterpage1.html' %}
 {% load static %}
 {% block content %}
 
@@ -9,7 +9,7 @@
         size: 300px 300px;
     }
     #row5{
-        background-image: url('https://i.pinimg.com/564x/d4/7b/0d/d47b0d3ffba5f7d01646b3b57cad6e78.jpg');
+        /* background-image: url('https://i.pinimg.com/564x/d4/7b/0d/d47b0d3ffba5f7d01646b3b57cad6e78.jpg'); */
         
     }
     #row4{
@@ -21,7 +21,7 @@
         color: white;
     }
     #contact_table2{
-        margin-left: 150px;
+        margin-left: 100px;
         margin-top: 50px;
         text-align: center;
         /* border: 1px solid white; */
@@ -31,22 +31,36 @@
         line-height: 70px;
         
     }
+    #contact_table{
+        margin-left: 150px;
+        margin-top: 50px;
+    }
     input:hover{
         background-color: rgb(26, 24, 24);
     }
     textarea:hover{
         background-color:  rgb(26, 24, 24);;
     }
+    #submit{
+        color: black;
+        background-color: rgb(41, 191, 250);
+        border-radius: 10px;
+    }
+    #submit:hover{
+        background-color: white;
+    }
 
 
 
 </style>
+<div class="container-fluid">
+    
 <div class="row" id="row5">
 
 </div>
 <div class="row" id="row4">
     <div class="col-6" id="c.col-6">
-        <h1 id="get" style="margin-top: 50px;">GET IN TOUCH</h1>
+        <h1 id="get" style="margin-top: 50px;margin-left: 150px;">GET IN TOUCH</h1>
         
         <table id="contact_table" >
            <form action="">
@@ -99,6 +113,7 @@
         </table>
         </div>
     </div>
+</div>
 </div>
 
 

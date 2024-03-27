@@ -1,4 +1,4 @@
-{% extends 'masterpage.html' %}
+{% extends 'masterpage1.html' %}
 {% load static %}
 {% block content %}
 
@@ -47,63 +47,65 @@
 
 </style>
 
-<div class="row"  style=" background-color:rgb(159, 223, 185)">
-    <h1 style="margin-top: 20px;margin-bottom: 30px;">Shopping Cart</h1>
+<div class="container-fluid">
+    <div class="row"  style=" background-color:rgb(159, 223, 185)">
+        <h1 style="margin-top: 20px;margin-bottom: 30px; padding-left: 600px;">Shopping Cart</h1>
+    </div>
+    
+    <div class="row"style=" background-color:rgb(159, 223, 185)">
+        <div class="col-1">
+    
+        </div>
+        <div class="col-10">
+            <table id="cart_table">
+                <tr>
+                    <th style="width: 300px;">Product</th>
+                    <th style="width: 300px;">Product Name</th>
+                    
+                    <th style="width: 200px;">Price</th>
+                    <th style="width: 200px;;">Quantity</th>
+                    <th style="width: 200px;">Subtotal</th>
+                    <th style="width: 200px;">Remove</th>
+                    
+                </tr>
+                {% for item in cart_items %}
+                <tr>
+                    <td><img src="{{item.product.image.url}}" alt=""></td>
+                    <td><b>{{item.product.name}}</b></td>
+                    <td>{{item.product.price}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>$125.89</td>
+                    <td><a href="{% url 'customer:remove_from_cart' item.product.id %}">Remove</a></td>
+                </tr>
+                {% endfor %}
+                <!-- <tr>
+                    <th>Promotion Code</th>
+                    <td></td>
+                    <td><b>Cart Totals</b></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Coupon Code">
+                        <button type="submit" style="background-color: blue; border-radius: 20px; color: white;">Apply Coupon</button>
+                    </td><td></td>
+                    <td><b>Subtotal</b></td>
+                    <td>$125.435</td>
+                </tr> -->
+                <tr>
+                    <td></td><td></td>
+                    <td><b>Total</b></td>
+                    <td><b>{{grand_total}}</b></td>
+                    <td><button type="submit" id="ppbtn" style="margin-top: 30px; border-radius: 20px; background-color: blue; color: white;"> <a href="{% url 'customer:payment' %}">Buy Now</a></button></td>
+                </tr>
+            </table>
+    
+        </div>
+        <div class="col-1" >
+    
+        </div>
+    </div>
+    
 </div>
-
-<div class="row"style=" background-color:rgb(159, 223, 185)">
-    <div class="col-1">
-
-    </div>
-    <div class="col-10">
-        <table id="cart_table">
-            <tr>
-                <th style="width: 300px;">Product</th>
-                <th style="width: 300px;">Product Name</th>
-                
-                <th style="width: 200px;">Price</th>
-                <th style="width: 200px;;">Quantity</th>
-                <th style="width: 200px;">Subtotal</th>
-                <th style="width: 200px;">Remove</th>
-                
-            </tr>
-            {% for item in cart_items %}
-            <tr>
-                <td><img src="{{item.product.image.url}}" alt=""></td>
-                <td><b>{{item.product.name}}</b></td>
-                <td>{{item.product.price}}</td>
-                <td>{{item.quantity}}</td>
-                <td>$125.89</td>
-                <td><a href="{% url 'customer:remove_from_cart' item.product.id %}">Remove</a></td>
-            </tr>
-            {% endfor %}
-            <!-- <tr>
-                <th>Promotion Code</th>
-                <td></td>
-                <td><b>Cart Totals</b></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="text" placeholder="Coupon Code">
-                    <button type="submit" style="background-color: blue; border-radius: 20px; color: white;">Apply Coupon</button>
-                </td><td></td>
-                <td><b>Subtotal</b></td>
-                <td>$125.435</td>
-            </tr> -->
-            <tr>
-                <td></td><td></td>
-                <td><b>Total</b></td>
-                <td><b>{{grand_total}}</b></td>
-                <td><button type="submit" id="ppbtn" style="margin-top: 30px; border-radius: 20px; background-color: blue; color: white;"> <a href="{% url 'customer:payment' %}">Buy Now</a></button></td>
-            </tr>
-        </table>
-
-    </div>
-    <div class="col-1" >
-
-    </div>
-</div>
-
 
 
 

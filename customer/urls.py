@@ -17,7 +17,11 @@ urlpatterns=[
     path('remove_from_cart/<int:product_id>/',views.remove_from_cart,name='remove_from_cart'),
     path('wishlist/',views.wishlist,name='wishlist'),
     path('add_to_wishlist/<int:products_id>/',views.add_to_wishlist,name='add_to_wishlist'),
-    path('remove_from_wishlist/<int:products_id>/',views.remove_from_wishlist,name='remove_from_wishlist')
+    path('remove_from_wishlist/<int:products_id>/',views.remove_from_wishlist,name='remove_from_wishlist'),
+    path('masterpage1/',views.masterpage1,name='masterpage1'),
+    path('profile/',views.profile,name='profile')
+
+
 
 
 
