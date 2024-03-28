@@ -13,9 +13,26 @@
 #bsbtntable{
   width: 1000px;
   margin-left: 300px;
+  text-align: center;
   margin-top: 30px;
+  /* border: 1px solid black; */
 }
- 
+#accountname{
+  border-radius: 100px;
+  background-color:black;
+  width: 34px;
+  color: white;
+  font-size: larger;
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+#accountname a{
+  color: white;
+  text-decoration: none;
+}
+    
+
+
 </style>
 
 <div class="container-fluid">
@@ -23,6 +40,7 @@
     <table id="bsbtntable">
       <tr>
         <td><input type="text" placeholder="Search For Styles, Brands & More" style="width: 500px; text-align: center;"></td>
+        <td id="accountname"><a href="{% url 'customer:profile' %}">{{customer}}</a></td>
         <td><i class="fa-regular fa-user"> <span><a href="{% url 'customer:profile' %}" style="font-family: sans-serif; text-decoration: none; color: black;">Account</a></span></i></td>
         <td><i class="fa-regular fa-heart"> <span><a href="{% url 'customer:wishlist' %}" style="font-family: sans-serif; text-decoration: none; color: black;">Whishlist</a></span></i></td>
         <td><i class="fa-solid fa-cart-shopping"> <span><a href="{% url 'customer:cart' %}" style="font-family: sans-serif; text-decoration: none; color: black;">Cart</a></span></i></td>

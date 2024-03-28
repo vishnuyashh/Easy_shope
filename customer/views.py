@@ -1,10 +1,19 @@
 from django.shortcuts import render ,redirect
 from seller.models import *
-from .models import *
+from .models import * 
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
+   if 'customer' in request.session:
+    cust_id=request.session.get('customer')
+    cust=Customer.objects.get(id=cust_id)
+    a=cust.username
+    cust=a[0]
+    return render(request,'index.html',{'customer':cust})
+   else:
     return render(request,'index.html')
+
 
 def login(request):
     if request.method=='POST':
@@ -65,15 +74,18 @@ def about(request):
     return render(request,'about.html')
 
 def cart(request):
-   cart_items=Cart.objects.all()
-   total_price=sum(item.product.price*item.quantity for item in cart_items)
-   total_price_per_item=[]
-   grand_total=0
-   for item in cart_items:
+   if 'customer' in request.session:
+    cart_items=Cart.objects.all()
+    total_price=sum(item.product.price*item.quantity for item in cart_items)
+    total_price_per_item=[]
+    grand_total=0
+    for item in cart_items:
       item_total=item.product.price*item.quantity
       total_price_per_item.append({'item':item,'total':'item_total'})
       grand_total+=item_total    
-   return render(request,'cart.html',{'cart_items':cart_items,'grand_total':grand_total,'total_price':total_price})
+    return render(request,'cart.html',{'cart_items':cart_items,'grand_total':grand_total,'total_price':total_price})
+   else:
+      return redirect('customer:login')
 
 def add_to_cart(request,product_id):
    if request.method=='POST':
@@ -104,8 +116,6 @@ def add_to_wishlist(request,products_id):
       pdt=Product.objects.get(id=products_id)
       wishlist,created=Wishlist.objects.get_or_create(products=pdt)
       wishlist.save()
-      
-     
       return redirect('customer:wishlist')
    
 
@@ -121,4 +131,6 @@ def profile(request):
     cust=Customer.objects.get(id=cust_id)
         
     return render(request,'profile.html',{'customer':cust})
+   else:
+      return redirect('customer:login')
 

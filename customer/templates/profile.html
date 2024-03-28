@@ -26,10 +26,6 @@
         border-radius: 20px;
         color: white;
     }
-    #profile_row{
-        /* background-image: url('https://www.hotwaxsystems.com/hubfs/Imported_Blog_Media/AdobeStock_72884317-3.jpeg'); */
-        
-    }
     #wishlist{
         text-decoration: none;
         color: black;
@@ -37,6 +33,9 @@
     #love_symbol{
         text-decoration: none;
         color: black;
+    }
+    #profile_row{
+        background-color:bisque;
     }
 </style>
 
@@ -47,7 +46,7 @@
             <div class="box" style="margin-top: 20px;margin-bottom: 30px;  background-color: rgb(231, 23, 151);">
                 <div class="img" style="margin-top: 40px; margin-bottom: 20px;">
                     <img src="{% static 'images/dpwomen3.jpg' %}" alt="" style="border-radius: 500px; width: 150px; height: 150px;margin-left: 130px; margin-top: 10px;">
-                    <table style="margin-left: 180px;">
+                    <table style="margin-left: 140px; text-align: center;">
                         
                         <tr>
                             <th>{{customer.username}}</th>
