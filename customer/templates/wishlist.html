@@ -83,23 +83,7 @@
                     <th style="width: 200px;">Remove</th>
                     
                 </tr>
-                <!-- {% for item in wishlist_item %}
-                <tr> -->
-                    <!-- <td><img src="{{item.products.image.url}}" alt=""></td>
-                    <td><b>{{item.products.name}}</b></td>
-                    <td>{{item.products.price}}</td>
-                   <form action="{% url 'customer:add_to_cart' item.products.id %}" method="post">
-                    {% csrf_token %}
-                    <td><button type="submit" id="add_to_btn">Add to Cart</button></td>
-                   </form> -->
-                   <!-- <form action="{% url 'customer:remove_from_wishlist' item.products.id %}" method="post">
-                    {% csrf_token %}
-                    <td><button type="submit" id="remove_btn">Remove</button></td>
-                   </form>
-                    
-                </tr>
-                {% endfor %} -->
-
+                
                 {% for item in wishlist_item %}
 
                 <tr>
